@@ -30,7 +30,7 @@ package tw.edu.npu.mis;
  *
  * @author Samael Wang <freesamael@gmail.com>
  */
-public class View {
+public class View implements Observer,Showable{
 
     private final String mName;
     private final Window mWindow;
@@ -56,4 +56,8 @@ public class View {
         System.out.println("View (" + mName + "): " + mModel.getData());
     }
 
+    public void Updata()
+    {
+        invalidate();
+    }
 }
