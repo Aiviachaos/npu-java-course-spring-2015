@@ -29,24 +29,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author STP
+ * 建立 Controller類別 Observer陣列類別
+ * @author Administrator
  */
 public class Subject {
     private Controller mController;
     List<Observer> allview = new ArrayList<>();
     //List<Showable> sb = new ArrayList<>();
     
+    /**
+     * 加入View
+     * @param o 
+     */
     public void Attach(Observer o)
     {
         allview.add(o);
     }
     
+    /**
+     * 移除View
+     * @param o 
+     */
     public void Detach(Observer o)
     {
         allview.remove(o);
     }
     
+    /**
+     * 檢查有無內容
+     */
     public void NotifyServer()
     {
         for(Observer o : allview)
