@@ -26,8 +26,8 @@
 package tw.edu.npu.mis;
 
 /**
- *
- * @author STP
+ * 名稱屬性 Window類別 Model類別
+ * @author Administrator
  */
 public class AlternatioveView implements Observer,Showable{
     private final String mName;
@@ -41,10 +41,16 @@ public class AlternatioveView implements Observer,Showable{
         mModel = model;
     }
     
+    /**
+     * 加入顯示排程
+     */
     public void invalidate() {
         mWindow.schduleRedraw(this);
     }
     
+    /**
+     * 文字反向顯示方法
+     */
     public void show()
     {
         String s = mModel.getData();
@@ -58,10 +64,16 @@ public class AlternatioveView implements Observer,Showable{
     }
 
     //@Override
+    /**
+     * 顯示內容方法
+     */
     public void onDraw() {
         show();
     }
     
+    /**
+     *更新資料方法
+     */
     public void Updata()
     {
         invalidate();
