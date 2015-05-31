@@ -26,8 +26,8 @@
 package tw.edu.npu.mis;
 
 /**
- *
- * @author STP
+ * 顯示資料界面
+ * @author Administrator
  */
 public interface Showable {
     public void onDraw();
