@@ -26,9 +26,8 @@
 package tw.edu.npu.mis;
 
 /**
- * {@link View} generates outputs to the user.
- *
- * @author Samael Wang <freesamael@gmail.com>
+ * 建立名稱屬性 Window類別 Model類別
+ * @author Administrator
  */
 public class View implements Observer,Showable{
 
@@ -36,6 +35,12 @@ public class View implements Observer,Showable{
     private final Window mWindow;
     private final Model mModel;
 
+    /**
+     * 建構值
+     * @param name
+     * @param window
+     * @param model 
+     */
     public View(String name, Window window, Model model) {
         mName = name;
         mWindow = window;
@@ -43,6 +48,7 @@ public class View implements Observer,Showable{
     }
 
     /**
+     * 加入顯示排程
      * Invalidate the view, which indicates it needs to be redrawn later.
      */
     public void invalidate() {
@@ -50,12 +56,16 @@ public class View implements Observer,Showable{
     }
 
     /**
+     * 顯示內容
      * Show the content of the model on the console.
      */
     public void onDraw() {
         System.out.println("View (" + mName + "): " + mModel.getData());
     }
 
+    /**
+     * 更新資料
+     */
     public void Updata()
     {
         invalidate();
