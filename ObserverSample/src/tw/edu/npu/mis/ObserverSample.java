@@ -30,7 +30,8 @@ import java.util.List;
 
 /**
  * Simulation of a GUI application.
- *
+ * 建立 Window類別 Model類別 Controller類別 Showable陣列類別
+ * 開始偵測輸入值
  * @author Samael Wang <freesamael@gmail.com>
  */
 public class ObserverSample {
