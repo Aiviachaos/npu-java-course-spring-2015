@@ -26,8 +26,8 @@
 package tw.edu.npu.mis;
 
 /**
- *
- * @author STP
+ * 更新資料方法 Updata
+ * @author Administrator
  */
 public interface Observer {
     public void Updata();
