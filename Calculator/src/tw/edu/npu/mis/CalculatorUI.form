@@ -377,7 +377,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="C"/>
+        <Property name="text" type="java.lang.String" value="%"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton19">
@@ -386,12 +386,12 @@
           <Color blue="0" green="0" id="ToolBar.dockingForeground" palette="3" red="ff" type="palette"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="&#x6a19;&#x6977;&#x9ad4;" size="14" style="3"/>
+          <Font name="&#x6a19;&#x6977;&#x9ad4;" size="18" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="CE"/>
+        <Property name="text" type="java.lang.String" value="C"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">

@@ -138,12 +138,12 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton18.setBackground(javax.swing.UIManager.getDefaults().getColor("ToolBar.dockingForeground"));
         jButton18.setFont(new java.awt.Font("標楷體", 3, 18)); // NOI18N
         jButton18.setForeground(new java.awt.Color(0, 0, 255));
-        jButton18.setText("C");
+        jButton18.setText("%");
 
         jButton19.setBackground(javax.swing.UIManager.getDefaults().getColor("ToolBar.dockingForeground"));
-        jButton19.setFont(new java.awt.Font("標楷體", 3, 14)); // NOI18N
+        jButton19.setFont(new java.awt.Font("標楷體", 3, 18)); // NOI18N
         jButton19.setForeground(new java.awt.Color(0, 0, 255));
-        jButton19.setText("CE");
+        jButton19.setText("C");
 
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setFont(new java.awt.Font("標楷體", 1, 36)); // NOI18N
