@@ -150,7 +150,7 @@ public class CalculatorUI extends javax.swing.JFrame implements Observer{
         jButton19.setText("C");
 
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("標楷體", 1, 36)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("標楷體", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         jTextField1.setText("0");
@@ -271,7 +271,7 @@ public class CalculatorUI extends javax.swing.JFrame implements Observer{
 
     @Override
     public void update(Observable o, Object o1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        jTextField1.setText(o1.toString());
     }
     
     public void setController(Controller c)

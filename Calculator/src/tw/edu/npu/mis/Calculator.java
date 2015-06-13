@@ -11,7 +11,7 @@ import java.util.Observable;
  * The model class of the calculator application.
  */
 public class Calculator extends Observable{
-    private String mData = "", mData2 = "";
+    private String mData = "", mData2 = "", mE = "";
     
     /**
      * The available operators of the calculator.
@@ -53,22 +53,57 @@ public class Calculator extends Observable{
         switch(operator)
         {
             case PLUS:
+                mData2 = mData;
+                mE = "+";
+                mData = "";
                 break;
             case MINUS:
+                mData2 = mData;
+                mE = "-";
+                mData = "";
                 break;
             case TIMES:
+                mData2 = mData;
+                mE = "*";
+                mData = "";
                 break;
             case OVER:
+                mData2 = mData;
+                mE = "/";
+                mData = "";
                 break;
             case SQRT:
+                mData = String.valueOf(Math.sqrt(Double.valueOf(mData)));
                 break;
             case PERCENT:
+                if(!mData2.equals("") && !mData.equals("")) mData = String.valueOf((Double.valueOf(mData) * Double.valueOf(mData2))/100);
                 break;
             case CLEAR:
+                mData = "";
+                mData2 = "";
+                mE = "";
                 break;
             case EQUAL:
+                switch(mE)
+                {
+                    case "":
+                        return;
+                    case "+":
+                        mData = String.valueOf(Double.valueOf(mData2) + Double.valueOf(mData));
+                        break;
+                    case "-":
+                        mData = String.valueOf(Double.valueOf(mData2) - Double.valueOf(mData));
+                        break;
+                    case "*":
+                        mData = String.valueOf(Double.valueOf(mData2) * Double.valueOf(mData));
+                        break;
+                    case "/":
+                        mData = String.valueOf(Double.valueOf(mData2) / Double.valueOf(mData));
+                        break;
+                }
                 break;
         }
+        if(mData.length() > 1)if(mData.substring(mData.length()-2, mData.length()).equals(".0")) mData = mData.substring(0, mData.length() - 2);
         getDisplay();
     }
     
@@ -84,7 +119,11 @@ public class Calculator extends Observable{
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        Calculator myModel = new Calculator();
+        CalculatorUI myView = new CalculatorUI();
+        Controller myController = new Controller(myModel, myView);
+        myModel.addObserver(myView);
+        myView.setController(myController);
     }
 
 }
