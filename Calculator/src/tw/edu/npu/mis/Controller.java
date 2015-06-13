@@ -24,7 +24,40 @@ public class Controller implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent ae) {
-        
+        String s = ae.getSource().toString().substring(ae.getSource().toString().indexOf("text=")+5, ae.getSource().toString().lastIndexOf(","));
+        switch(s)
+        {
+            case "+":
+                mModel.performOperation(Calculator.Operator.PLUS);
+                break;
+            case "-":
+                mModel.performOperation(Calculator.Operator.MINUS);
+                break;
+            case "*":
+                mModel.performOperation(Calculator.Operator.TIMES);
+                break;
+            case "/":
+                mModel.performOperation(Calculator.Operator.OVER);
+                break;
+            case "√":
+                mModel.performOperation(Calculator.Operator.SQRT);
+                break;
+            case "%":
+                mModel.performOperation(Calculator.Operator.PERCENT);
+                break;
+            case "C":
+                mModel.performOperation(Calculator.Operator.CLEAR);
+                break;
+            case "=":
+                mModel.performOperation(Calculator.Operator.EQUAL);
+                break;
+            case ".":
+                mModel.appendDot();
+                break;
+            default:
+                mModel.appendDigit(Integer.valueOf(s));
+                break;
+        }
     }
     
 }

@@ -273,4 +273,27 @@ public class CalculatorUI extends javax.swing.JFrame implements Observer{
     public void update(Observable o, Object o1) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    public void setController(Controller c)
+    {
+        jButton1.addActionListener(c);
+        jButton2.addActionListener(c);
+        jButton3.addActionListener(c);
+        jButton4.addActionListener(c);
+        jButton5.addActionListener(c);
+        jButton6.addActionListener(c);
+        jButton7.addActionListener(c);
+        jButton8.addActionListener(c);
+        jButton9.addActionListener(c);
+        jButton10.addActionListener(c);
+        jButton11.addActionListener(c);
+        jButton12.addActionListener(c);
+        jButton13.addActionListener(c);
+        jButton14.addActionListener(c);
+        jButton15.addActionListener(c);
+        jButton16.addActionListener(c);
+        jButton17.addActionListener(c);
+        jButton18.addActionListener(c);
+        jButton19.addActionListener(c);
+    }
 }

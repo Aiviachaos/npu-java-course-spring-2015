@@ -38,21 +38,44 @@ public class Calculator extends Observable{
     
     public void appendDigit(int digit) {
         // TODO code application logic here
-        
+        mData += String.valueOf(digit);
+        getDisplay();
     }
     
     public void appendDot() {
         // TODO code application logic here
         mData += ".";
+        getDisplay();
     }
     
     public void performOperation(Operator operator) {
         // TODO code application logic here
+        switch(operator)
+        {
+            case PLUS:
+                break;
+            case MINUS:
+                break;
+            case TIMES:
+                break;
+            case OVER:
+                break;
+            case SQRT:
+                break;
+            case PERCENT:
+                break;
+            case CLEAR:
+                break;
+            case EQUAL:
+                break;
+        }
+        getDisplay();
     }
     
     public String getDisplay() {
         // TODO code application logic here
-        setChange();
+        setChanged();
+        notifyObservers(mData);
         return null;
     }
 
@@ -61,6 +84,7 @@ public class Calculator extends Observable{
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
     }
 
 }
