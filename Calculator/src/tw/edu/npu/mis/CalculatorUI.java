@@ -269,11 +269,20 @@ public class CalculatorUI extends javax.swing.JFrame implements Observer{
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * 更新計算機畫面內容
+     * @param o
+     * @param o1 
+     */
     @Override
     public void update(Observable o, Object o1) {
         jTextField1.setText(o1.toString());
     }
     
+    /**
+     * 監聽按鈕事件
+     * @param c 
+     */
     public void setController(Controller c)
     {
         jButton1.addActionListener(c);
