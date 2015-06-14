@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- *
+ *　CalculatorUI　Calculator類別
  * @author Administrator
  */
 public class Controller implements ActionListener{
@@ -22,6 +22,10 @@ public class Controller implements ActionListener{
         mView = view;
     }
     
+    /**
+     * 運算子事件設定
+     * @param ae 
+     */
     @Override
     public void actionPerformed(ActionEvent ae) {
         String s = ae.getSource().toString().substring(ae.getSource().toString().indexOf("text=")+5, ae.getSource().toString().lastIndexOf(","));
