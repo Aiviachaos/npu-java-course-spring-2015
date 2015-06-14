@@ -9,12 +9,14 @@ import java.util.Observable;
 
 /**
  * The model class of the calculator application.
+ * 有mData mData2 mE字串
  */
 public class Calculator extends Observable{
     private String mData = "", mData2 = "", mE = "";
     
     /**
      * The available operators of the calculator.
+     * 運算子代號
      */
     public enum Operator {
         CLEAR,       // C
@@ -36,18 +38,29 @@ public class Calculator extends Observable{
         MEM_RECALL   // MR
     }
     
+    /**
+     * 加入數字
+     * @param digit 傳入的數字
+     */
     public void appendDigit(int digit) {
         // TODO code application logic here
         mData += String.valueOf(digit);
         getDisplay();
     }
     
+    /**
+     * 加入小數點
+     */
     public void appendDot() {
         // TODO code application logic here
         mData += ".";
         getDisplay();
     }
     
+    /**
+     * 依傳入的運算子代號計算
+     * @param operator 
+     */
     public void performOperation(Operator operator) {
         // TODO code application logic here
         switch(operator)
@@ -106,7 +119,10 @@ public class Calculator extends Observable{
         if(mData.length() > 1)if(mData.substring(mData.length()-2, mData.length()).equals(".0")) mData = mData.substring(0, mData.length() - 2);
         getDisplay();
     }
-    
+    /**
+     * 判斷是否有儲存數字
+     * @return 
+     */
     public String getDisplay() {
         // TODO code application logic here
         setChanged();
@@ -115,6 +131,7 @@ public class Calculator extends Observable{
     }
 
     /**
+     * 主程式
      * @param args the command line arguments
      */
     public static void main(String[] args) {
